@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <ncurses.h>
 
+// Write a file 
 void writeFile()
 {
 
@@ -9,15 +10,14 @@ void writeFile()
     clear();
     mvprintw(0, 0, "Enter the file name: ");
     refresh();
-    echo(); // activa la función echo() para mostrar la entrada del usuario
+    echo(); 
     getstr(filename);
-    noecho(); // desactiva la función echo() para que la entrada del usuario no se muestre en pantalla
+    noecho(); 
     mvprintw(1, 0, "Enter the file content: ");
     refresh();
-    echo(); // activa la función echo() nuevamente
+    echo(); 
     getstr(content);
-    noecho(); // desactiva la función echo() nuevamente
-
+    noecho(); 
 
     FILE *file = fopen(filename, "w");
 
