@@ -38,9 +38,15 @@ void main_loop()
         writeFile();
         break;
       case 1:
-        // Código para la opción 2
+        clear();
+        mvprintw(0, 0, "Selected option: %s\n", options[choice]);
+        refresh();
+        getch();
         break;
-      // Repite para cada opción
+        clear();
+        mvprintw(0, 0, "Selected option: %s\n", options[choice]);
+        refresh();
+        getch();
       default:
         break;
       }
