@@ -2,11 +2,12 @@
 #include "draw_menu.h"
 #include "read_input.h"
 #include "get_window_size.h"
+#include "write_file.h"
 
 // Main lopp
 void main_loop()
 {
-  const char *options[] = {"Option 1", "Option 2", "Option 3", "Option 4", "Option 5", "Option 6"};
+  const char *options[] = {"Write to file", "Option 2", "Option 3", "Option 4", "Option 5", "Option 6"};
   int choice = 0;
   int max_rows, max_cols;
   get_window_size(&max_rows, &max_cols);
@@ -31,10 +32,18 @@ void main_loop()
     }
     else if (c == KEY_ENTER || c == '\n')
     {
-      clear();
-      mvprintw(0, 0, "Selected option: %s\n", options[choice]);
-      refresh();
-      getch();
+      switch (choice)
+      {
+      case 0:
+        writeFile();
+        break;
+      case 1:
+        // Código para la opción 2
+        break;
+      // Repite para cada opción
+      default:
+        break;
+      }
     }
     else if (c == 'e')
     {

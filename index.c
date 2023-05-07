@@ -3,6 +3,7 @@
 #include "./src/int_window.h"
 #include "./src/end_window.h"
 
+
 int main()
 {
   initWindow();
