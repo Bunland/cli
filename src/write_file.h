@@ -4,7 +4,6 @@
 // Write a file 
 void writeFile()
 {
-
     char filename[256];
     char content[256];
     clear();
